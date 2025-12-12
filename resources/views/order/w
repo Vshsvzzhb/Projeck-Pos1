@@ -1,0 +1,44 @@
+@foreach($categories as $category)
+<h3>{{ $category->name }}</h3>
+<div class="row row-cols-1 row-cols-md-2 g-2 item-product">
+    @if($category->product && count($category->product)) @foreach
+    ($category->product as $product)
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">{{ $product->name }}</h5>
+                <h3 class="mt-auto">
+                    Rp {{ number_format($product->price, 0, ',', '.') }}
+                </h3>
+                <input
+                    type="hidden"
+                    class="product-id"
+                    value="{{ $product->id }}"
+                />
+                <input
+                    type="hidden"
+                    class="product-price"
+                    value="{{ $product->price }}"
+                />
+                <button
+                    class="btn-add btn btn-primary mt-2"
+                    data-id="{{ $product->id }}"
+                    data-name="{{ $product->name }}"
+                    data-price="{{ $product->price }}"
+                >
+                    Add
+                </button>
+            </div>
+        </div>
+    </div>
+    @endforeach @else
+    <div class="col">
+        <p class="text-muted">Belum ada produk untuk kategori ini.</p>
+    </div>
+    @endif
+</div>
+@endforeach
+
+
+            $table->foreignId("user_id")->constrained('users');
+            $table->foreignId("member_id")->constrained('members');

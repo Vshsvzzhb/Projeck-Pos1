@@ -1,0 +1,6 @@
+id,name,description,stock,price,category_id,created_at,updated_at
+1,Minuman Coffee,Minuman Coffee,20," Rp80,000.00 ",1,2025-10-21 10:57:29,2025-10-21 10:57:29
+2,Minuman Non Coffee,Minuman Non Coffee,30," Rp40,000.00 ",3,2025-10-21 10:57:29,2025-10-21 10:57:29
+3,Nasi,Nasi,10," Rp10,000.00 ",3,2025-10-21 10:57:29,2025-10-21 10:57:29
+4,Snack,Snack,10," Rp5,000.00 ",2,2025-10-21 10:57:29,2025-10-21 10:57:29
+5,Mie,Mie,10," Rp20,000.00 ",3,2025-10-21 10:57:29,2025-10-21 10:57:29
